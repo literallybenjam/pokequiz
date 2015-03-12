@@ -77,9 +77,8 @@ function advanceDiv() {
                 else calc_with_ditto = false;
                 /* falls through */
             case "egg-clusive":
-                console.log(calc_with_ditto);
                 calculateEggGroup(calc_with_ditto);
-                if (EGG_NAMES[egg_group] == "ditto") loadSection("ditto-check");
+                if (EGG_NAMES[egg_group] == "Ditto") loadSection("ditto-check");
                 //  else if (EGG_NAMES[egg_group] == "dragon") loadSection("dragon-check");
                 //  else if (EGG_NAMES[egg_group] == "flying") loadSection("flying-check");
                 break;
