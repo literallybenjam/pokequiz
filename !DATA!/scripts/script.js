@@ -82,8 +82,16 @@ function advanceDiv() {
             case "egg-clusive":
                 calculateEggGroup(calc_with_ditto);
                 if (EGG_NAMES[egg_group] == "Ditto") loadSection("ditto-check");
-                //  else if (EGG_NAMES[egg_group] == "dragon") loadSection("dragon-check");
-                //  else if (EGG_NAMES[egg_group] == "flying") loadSection("flying-check");
+                else if (EGG_NAMES[egg_group] == "Dragon") loadSection("dragon-check");
+                else if (EGG_NAMES[egg_group] == "Flying") loadSection("flying-check");
+                break;
+
+            case "dragon-check":
+                if (calculateSectionValue("dragon-check") < 0.5) egg_group = 13;
+                break;
+
+            case "flying-check":
+                if (calculateSectionValue("flying-check") < 0.5) egg_group = 14;
                 break;
 
             default:
