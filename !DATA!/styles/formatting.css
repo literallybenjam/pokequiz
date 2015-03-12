@@ -146,14 +146,6 @@ h1 {
 }
 
 h2 {
-    line-height: 27pt;
-    text-align: center;
-    text-decoration: underline;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-h3 {
     line-height: 18pt;
     text-align: left;
     -moz-text-align-last: auto;

@@ -4,13 +4,7 @@ A quiz for determining your inner Pokémon! Programmed for the web in HTML, Java
 
 ## method
 
-The POKÉQUIZ uses three main pieces of information to determine which Pokémon best suits you. They are:
-
-- Egg Group
-- Type
-- Habitat
-
-Of these, the egg group is the most essential. There are lots of different Pokémon species, so chances are that you will get a different result from everyone you know. However, you can use egg group as a sort of barometer for Pokémon compatibility—for those of you who are into that sort of thing.
+The POKÉQUIZ first determines the egg group to which you most likely belong, and then works to narrow things down from there. There are lots of different Pokémon species, so chances are that you will get a different result from everyone you know. However, you can use egg group as a sort of barometer for Pokémon compatibility—for those of you who are into that sort of thing.
 
 ## endmatter
 
