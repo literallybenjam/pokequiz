@@ -55,7 +55,6 @@ table {
     border-collapse: separate;
     border-spacing: 1.875pt 2.25pt;
     padding: 0;
-    width: 150pt;
 }
 
 tbody + tbody::before {
