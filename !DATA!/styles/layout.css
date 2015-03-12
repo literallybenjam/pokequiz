@@ -221,7 +221,7 @@ a[href] {
     transition: background-color .5s;
 }
 
-body > nav > a[href] {
+div > span {
     display: inline-block;
     margin: 0 7.5pt;
     border: solid 1pt;
@@ -230,6 +230,11 @@ body > nav > a[href] {
     height: 15pt;
     width: 150pt;
     transition: color .5s, background-color .5s;
+}
+
+div[data-mode="2"] > span {
+    border: none;
+    padding: 1.5pt;
 }
 
 sub {

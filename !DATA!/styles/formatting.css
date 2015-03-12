@@ -157,10 +157,6 @@ a[href] {
     text-decoration-style: dashed;
 }
 
-body > nav > a[href] {
-    line-height: 15pt;
-}
-
 b::before {
     content: "#";
 }
@@ -195,6 +191,14 @@ s {
 
 small {
     line-height: inherit;
+}
+
+div > span {
+    line-height: 15pt;
+}
+
+div[data-mode="1"] > span {
+    cursor: pointer;
 }
 
 sub, sup {

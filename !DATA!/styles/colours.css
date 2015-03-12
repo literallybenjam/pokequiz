@@ -257,13 +257,13 @@ a[href]:hover {
     background-color: #0c0c0c;
 }
 
-body > nav > a[href] {
+div > span {
     border-color: #cccccc;
     background-color: #0c0c0c;
     color: #cccccc;
 }
 
-body > nav > a[href]:hover {
+div > span:hover, div > span[data-selected] {
     background-color: #cccccc;
     color: #0c0c0c;
 }
