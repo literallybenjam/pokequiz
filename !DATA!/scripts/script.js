@@ -36,23 +36,23 @@ function selectOption() {
 function unloadDiv() {
     var i;
     current_div.dataset.mode = "1";
-    for (i = 0; i < current_div.getElementsByTagName("span"); i++) {
-        current_div.getElementsByTagName("span").item(i).removeEventListener("click", selectOption, false);
+    for (i = 0; i < current_div.getElementsByTagName("SPAN").length; i++) {
+        current_div.getElementsByTagName("SPAN").item(i).removeEventListener("click", selectOption, false);
     }
 }
 
 function loadDiv() {
     var i;
     current_div.dataset.mode = "0";
-    for (i = 0; i < current_div.getElementsByTagName("span"); i++) {
-        current_div.getElementsByTagName("span").item(i).addEventListener("click", selectOption, false);
+    for (i = 0; i < current_div.getElementsByTagName("SPAN").length; i++) {
+        current_div.getElementsByTagName("SPAN").item(i).addEventListener("click", selectOption, false);
     }
 }
 
 function loadSection(id) {
     current_section = document.getElementById(id);
     current_section.dataset.show = "";
-    current_div = current_section.getElementsByTagName("div").item(0);
+    current_div = current_section.getElementsByTagName("DIV").item(0);
     loadDiv();
 }
 
