@@ -24,14 +24,22 @@ aside {
 
 div {
     display: block;
-    margin: 18pt 0 0;
+    margin: 36pt 0 0;
     width: 100%;
+    transition: opacity 1s, visibility 1s;
 }
 
 section {
-    display: block;
     margin: auto;
     padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 1s, visibility 1s;
+}
+
+section[data-show] {
+    height: auto;
+    overflow: visible;
 }
 
 /*  TABLES  */

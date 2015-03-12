@@ -14,6 +14,23 @@
 
 div {
     text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+div[data-mode] {
+    opacity: 1;
+    visibility: visible;
+}
+
+section {
+    opacity: 0;
+    visibility: hidden;
+}
+
+section[data-show] {
+    opacity: 1;
+    visibility: visible;
 }
 
 /*  TABLES  */
