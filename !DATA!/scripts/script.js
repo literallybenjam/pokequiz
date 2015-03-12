@@ -53,6 +53,7 @@ function loadSection(id) {
     current_section = document.getElementById(id);
     current_section.dataset.show = "";
     current_div = current_section.getElementsByTagName("div").item(0);
+    loadDiv();
 }
 
 function init() {
