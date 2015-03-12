@@ -57,4 +57,4 @@ function init() {
     loadSection("egg-size");
 }
 
-window.addEventListener("DOMContentLoaded", init, false);
+document.addEventListener("DOMContentLoaded", init, false);
