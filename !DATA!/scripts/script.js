@@ -50,11 +50,7 @@ function calculateEggGroup(with_ditto) {
 }
 
 function displayResult(name) {
-    var r = document.createElement("SECTION");
-    r.innerHTML = '<p>Your result:</p><u style="font-size: 144pt; line-height: 144pt;">' + name + '</u><p>Egg group: <u>' + EGG_NAMES[egg_group] + '</u></p><p><a href="http://bulbapedia.bulbagarden.net/wiki/' + name + '_(Pokémon)" target="_blank">More information</a></p>';
-    document.body.appendChild(r);
-    r.dataset.show = "";
-    r.scrollIntoView({block: "end", behavior: "smooth"});
+    window.location.assign("Result/" + name + "/");
 }
 
 function advanceDiv() {
