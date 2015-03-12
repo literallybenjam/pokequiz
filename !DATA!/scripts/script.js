@@ -51,9 +51,10 @@ function calculateEggGroup(with_ditto) {
 
 function displayResult(name) {
     var result = document.createElement("DIV");
-    result.innerHTML = '<p>Your result:</p><u style="font-size: 144pt; line-height: 144pt;">' + name + '</u><p>Egg group: <u>' + EGG_NAMES[egg_group] + '</u></p><p><a href="http://bulbapedia.bulbagarden.net/wiki/' + name + '_(Pokémon)">More information</a></p>';
+    result.innerHTML = '<p>Your result:</p><u style="font-size: 144pt; line-height: 144pt;">' + name + '</u><p>Egg group: <u>' + EGG_NAMES[egg_group] + '</u></p><p><a href="http://bulbapedia.bulbagarden.net/wiki/' + name + '_(Pokémon)" target="_blank">More information</a></p>';
     document.body.appendChild(result);
     result.dataset.mode = "2";
+    result.scrollIntoView({block: "end", behavior: "smooth"})
 }
 
 function advanceDiv() {
@@ -76,6 +77,7 @@ function advanceDiv() {
                 else calc_with_ditto = false;
                 /* falls through */
             case "egg-clusive":
+                console.log(calc_with_ditto);
                 calculateEggGroup(calc_with_ditto);
                 if (EGG_NAMES[egg_group] == "ditto") loadSection("ditto-check");
                 //  else if (EGG_NAMES[egg_group] == "dragon") loadSection("dragon-check");
