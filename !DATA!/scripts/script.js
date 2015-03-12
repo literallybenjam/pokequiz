@@ -17,7 +17,7 @@ function calculateSectionValue(section_id) {
         div_element = section_element.getElementsByTagName("DIV").item(i);
         for (j = 0; j < div_element.getElementsByTagName("SPAN").length; j++) {
             if (div_element.getElementsByTagName("SPAN").item(j).dataset.selected !== undefined) {
-                cumulative_value += j / div_element.getElementsByTagName("SPAN").length;
+                cumulative_value += j / (div_element.getElementsByTagName("SPAN").length - 1);
                 break;
             }
         }
