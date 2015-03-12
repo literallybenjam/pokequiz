@@ -259,7 +259,7 @@ div > span {
     color: #cccccc;
 }
 
-div > span:hover, div > span[data-selected] {
+div[data-mode="0"] > span:hover, div > span[data-selected] {
     background-color: #cccccc;
     color: #0c0c0c;
 }

@@ -234,7 +234,7 @@ div > span {
     transition: color .5s, background-color .5s;
 }
 
-div[data-mode="2"] > span {
+div[data-mode="1"] > span {
     border: none;
     padding: 1.5pt;
 }
