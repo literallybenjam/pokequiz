@@ -68,6 +68,10 @@ function advanceDiv() {
 
         switch (current_section.id) {
 
+            case "begin":
+                loadSection("egg-size");
+                break;
+
             case "egg-size":
                 loadSection("egg-clusive");
                 break;
@@ -123,7 +127,7 @@ function loadSection(section_id) {
 
 function init() {
     window.scroll({top: 0, behavior: "smooth"});
-    loadSection("egg-size");
+    loadSection("begin");
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
