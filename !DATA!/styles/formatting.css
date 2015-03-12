@@ -13,6 +13,7 @@
 /*  SECTIONING  */
 
 div {
+    line-height: 24pt;
     text-align: center;
     opacity: 0;
     visibility: hidden;
@@ -214,7 +215,7 @@ div > span {
     line-height: 15pt;
 }
 
-div[data-mode="1"] > span {
+div[data-mode="0"] > span {
     cursor: pointer;
 }
 
