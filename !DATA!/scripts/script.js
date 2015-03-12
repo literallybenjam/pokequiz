@@ -4,7 +4,7 @@ var stage;
 var current_section = null;
 var current_div = null;
 var egg_group;
-var EGG_NAMES = ["field", "undiscovered", "water1", "monster", "grass", "bug", "mineral", "dragon", "flying", "water3", "amorphous", "water2", "ditto", "fairy", "humanlike"];
+var EGG_NAMES = ["Field", "Undiscovered", "Water 1", "Monster", "Grass", "Bug", "Mineral", "Dragon", "Flying", "Water 3", "Amorphous", "Water2", "Ditto", "Fairy", "Human-Like"];
 var EGG_COORDS = [[1, 0], [1, 1], [0.6, 0], [0.6, 0.7], [0.45, 0.55], [0.45, 0.8], [0.45, 1], [0.3, 0], [0.3, 1], [0.2, 0.8], [0.2, 1], [0, 0.7], [0, 0]];
 
 function calculateSectionValue(section_id) {
@@ -49,8 +49,16 @@ function calculateEggGroup(with_ditto) {
     egg_group = best_guess;
 }
 
+function displayResult(name) {
+    var result = document.createElement("DIV");
+    result.innerHTML = '<p>Your result:</p><u style="font-size: 144pt; line-height: 144pt;">' + name + '</u><p>Egg group: <u>' + EGG_NAMES[egg_group] + '</u></p><p><a href="http://bulbapedia.bulbagarden.net/wiki/' + name + '_(Pokémon)">More information</a></p>';
+    document.body.appendChild(result);
+    result.dataset.mode = "2";
+}
+
 function advanceDiv() {
 
+    var calc_with_ditto = true;
     unloadDiv();
     do current_div = current_div.nextElementSibling;
     while (current_div && current_div.tagName !== "DIV");
@@ -63,15 +71,15 @@ function advanceDiv() {
                 loadSection("egg-clusive");
                 break;
 
+            case "ditto-check":
+                if (calculateSectionValue("ditto-check") >= 0.5) displayResult("Ditto");
+                else calc_with_ditto = false;
+                /* falls through */
             case "egg-clusive":
-                calculateEggGroup();
+                calculateEggGroup(calc_with_ditto);
                 if (EGG_NAMES[egg_group] == "ditto") loadSection("ditto-check");
                 //  else if (EGG_NAMES[egg_group] == "dragon") loadSection("dragon-check");
                 //  else if (EGG_NAMES[egg_group] == "flying") loadSection("flying-check");
-                break;
-
-            case "ditto-check":
-                if (calculateSectionValue("ditto-check") < 0.5) calculateEggGroup(false);
                 break;
 
             default:
