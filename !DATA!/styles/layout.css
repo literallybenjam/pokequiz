@@ -24,7 +24,8 @@ aside {
 
 div {
     display: block;
-    margin: 36pt 0;
+    margin: 0;
+    padding: 18pt 0;
     width: 100%;
     transition: opacity 1s, visibility 1s;
 }
