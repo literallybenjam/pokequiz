@@ -54,7 +54,7 @@ function displayResult(name) {
     r.innerHTML = '<p>Your result:</p><u style="font-size: 144pt; line-height: 144pt;">' + name + '</u><p>Egg group: <u>' + EGG_NAMES[egg_group] + '</u></p><p><a href="http://bulbapedia.bulbagarden.net/wiki/' + name + '_(Pokémon)" target="_blank">More information</a></p>';
     document.body.appendChild(r);
     r.dataset.show = "";
-    window.scroll({top: document.documentElement.scrollHeight, behavior: "smooth"});
+    r.scrollIntoView({block: "end", behavior: "smooth"});
 }
 
 function advanceDiv() {
@@ -77,7 +77,10 @@ function advanceDiv() {
                 break;
 
             case "ditto-check":
-                if (calculateSectionValue("ditto-check") >= 0.5) displayResult("Ditto");
+                if (calculateSectionValue("ditto-check") >= 0.5) {
+                    displayResult("Ditto");
+                    break;
+                }
                 else calc_with_ditto = false;
                 /* falls through */
             case "egg-clusive":
