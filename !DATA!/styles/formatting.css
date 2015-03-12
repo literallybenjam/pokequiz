@@ -1,0 +1,210 @@
+/*  @RULES  */
+
+/*  GLOBAL RULES  */
+
+*:root {
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+/*  PAGE LAYOUT  */
+
+/*  SECTIONING  */
+
+div {
+    text-align: center;
+}
+
+/*  TABLES  */
+
+table {
+    text-align: center;
+}
+
+tbody + tbody::before {
+    content: "";
+}
+
+th {
+    text-decoration: underline;
+}
+
+/*  LISTS  */
+
+ul, ol, dl {
+    text-align: left;
+    -moz-text-align-last: auto;
+    text-align-last: auto;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+nav ul, nav li ul, nav li li ul, nav li li li ul, nav li li li li ul {
+    list-style-type: none;
+}
+
+li ul {
+    list-style-type: square;
+}
+
+li li ul {
+    list-style-type: disc;
+}
+
+li li li ul {
+    list-style-type: circle;
+}
+
+li li li li ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+li ol {
+    list-style-type: decimal-leading-zero;
+}
+
+li li ol {
+    list-style-type: lower-latin;
+}
+
+li li li ol {
+    list-style-type: lower-greek;
+}
+
+li li li li ol {
+    list-style-type: decimal;
+}
+
+dt + dt::before {
+    content: ", "
+}
+
+dd::before {
+    white-space: pre-wrap;
+    content: " : ";
+}
+
+dd + dd::before {
+    content: "″ : ";
+}
+
+dd::after {
+    content: "";
+}
+
+/*  BLOCK ELEMENTS  */
+
+blockquote::before {
+    line-height: 36pt;
+    text-align: center;
+    content: open-quote;
+}
+
+blockquote::after {
+    line-height: 36pt;
+    text-align: center;
+    content: close-quote;
+}
+
+figcaption {
+    line-height: 14.4pt;
+    text-align: right;
+    -moz-text-align-last: auto;
+    text-align-last: auto;
+}
+
+h1 {
+    line-height: 36pt;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+h2 {
+    line-height: 27pt;
+    text-align: center;
+    text-decoration: underline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+h3 {
+    line-height: 18pt;
+    text-align: left;
+    -moz-text-align-last: auto;
+    text-align-last: auto;
+}
+
+p {
+    text-align: justify;
+}
+
+dd p {
+    text-indent: 30pt;
+}
+
+/*  PHRASING  */
+
+a[href] {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+body > nav > a[href] {
+    line-height: 15pt;
+}
+
+b::before {
+    content: "#";
+}
+
+code::before, code::after {
+    content: "'";
+}
+
+del {
+    text-decoration: line-through;
+}
+
+em::before, em::after {
+    content: "~";
+}
+
+i[lang]::before {
+    content: "«";
+}
+
+i[lang]::after {
+    content: "»";
+}
+
+ins {
+    text-decoration: underline;
+}
+
+s {
+    text-decoration: line-through;
+}
+
+small {
+    line-height: inherit;
+}
+
+sub, sup {
+    line-height: 1;
+}
+
+sup {
+    text-transform: uppercase;
+}
+
+u {
+    text-decoration: none;
+}

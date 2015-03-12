@@ -1,0 +1,273 @@
+/*  @RULES  */
+
+/*  GLOBAL RULES  */
+
+@media print {
+    *:root * {
+        color: black;
+        background: none;
+    }
+}
+
+*::selection {
+    background: #646464;
+}
+
+*::-moz-selection {
+    background: #646464;
+}
+
+*:root {
+    color: #a3a3a3;
+}
+
+*:root::selection {
+    background: #646464;
+}
+
+*[data-type] {
+    color: #68A090;
+}
+*[data-type^="normal"] {
+    color: #A8A878;
+}
+*[data-type^="fire"] {
+    color: #F08030;
+}
+*[data-type^="fighting"] {
+    color: #C03028;
+}
+*[data-type^="water"] {
+    color: #6890F0;
+}
+*[data-type^="flying"] {
+    color: #A890F0;
+}
+*[data-type^="grass"] {
+    color: #78C850;
+}
+*[data-type^="poison"] {
+    color: #A040A0;
+}
+*[data-type^="electric"] {
+    color: #F8D030;
+}
+*[data-type^="ground"] {
+    color: #E0C068;
+}
+*[data-type^="psychic"] {
+    color: #F85888;
+}
+*[data-type^="rock"] {
+    color: #B8A038;
+}
+*[data-type^="ice"] {
+    color: #98D8D8;
+}
+*[data-type^="bug"] {
+    color: #A8B820;
+}
+*[data-type^="dragon"] {
+    color: #7038F8;
+}
+*[data-type^="ghost"] {
+    color: #705898;
+}
+*[data-type^="dark"] {
+    color: #705848;
+}
+*[data-type^="steel"] {
+    color: #B8B8D0;
+}
+*[data-type^="fairy"] {
+    color: #EE99AC;
+}
+
+*:root *[data-type] * {
+    color: inherit;
+}
+
+/*  PAGE LAYOUT  */
+
+html, body {
+    background: #1c1c1c;
+}
+
+/*  SECTIONING  */
+
+aside, footer {
+    color: #828282;
+}
+
+body > header {
+    background: #0c0c0c;
+}
+
+/*  TABLES  */
+
+caption, th, thead {
+    color: #cccccc;
+}
+
+td[data-type], th[data-type] {
+    color: #f5f5f5;
+    background-color: #68A090;
+}
+td[data-type^="normal"], th[data-type^="normal"] {
+    background-color: #A8A878;
+}
+td[data-type^="fire"], th[data-type^="fire"] {
+    background-color: #F08030;
+}
+td[data-type^="fighting"], th[data-type^="fighting"] {
+    background-color: #C03028;
+}
+td[data-type^="water"], th[data-type^="water"] {
+    background-color: #6890F0;
+}
+td[data-type^="flying"], th[data-type^="flying"] {
+    background-color: #A890F0;
+}
+td[data-type^="grass"], th[data-type^="grass"] {
+    background-color: #78C850;
+}
+td[data-type^="poison"], th[data-type^="poison"] {
+    background-color: #A040A0;
+}
+td[data-type^="electric"], th[data-type^="electric"] {
+    background-color: #F8D030;
+}
+td[data-type^="ground"], th[data-type^="ground"] {
+    background-color: #E0C068;
+}
+td[data-type^="psychic"], th[data-type^="psychic"] {
+    background-color: #F85888;
+}
+td[data-type^="rock"], th[data-type^="rock"] {
+    background-color: #B8A038;
+}
+td[data-type^="ice"], th[data-type^="ice"] {
+    background-color: #98D8D8;
+}
+td[data-type^="bug"], th[data-type^="bug"] {
+    background-color: #A8B820;
+}
+td[data-type^="dragon"], th[data-type^="dragon"] {
+    background-color: #7038F8;
+}
+td[data-type^="ghost"], th[data-type^="ghost"] {
+    background-color: #705898;
+}
+td[data-type^="dark"], th[data-type^="dark"] {
+    background-color: #705848;
+}
+td[data-type^="steel"], th[data-type^="steel"] {
+    background-color: #B8B8D0;
+}
+td[data-type^="fairy"], th[data-type^="fairy"] {
+    background-color: #EE99AC;
+}
+td[data-type$="-normal"], th[data-type$="-normal"] {
+    background-image: linear-gradient(to bottom right, transparent, #A8A878);
+}
+td[data-type$="-fire"], th[data-type$="-fire"] {
+    background-image: linear-gradient(to bottom right, transparent, #F08030);
+}
+td[data-type$="-fighting"], th[data-type$="-fighting"] {
+    background-image: linear-gradient(to bottom right, transparent, #C03028);
+}
+td[data-type$="-water"], th[data-type$="-water"] {
+    background-image: linear-gradient(to bottom right, transparent, #6890F0);
+}
+td[data-type$="-flying"], th[data-type$="-flying"] {
+    background-image: linear-gradient(to bottom right, transparent, #A890F0);
+}
+td[data-type$="-grass"], th[data-type$="-grass"] {
+    background-image: linear-gradient(to bottom right, transparent, #78C850);
+}
+td[data-type$="-poison"], th[data-type$="-poison"] {
+    background-image: linear-gradient(to bottom right, transparent, #A040A0);
+}
+td[data-type$="-electric"], th[data-type$="-electric"] {
+    background-image: linear-gradient(to bottom right, transparent, #F8D030);
+}
+td[data-type$="-ground"], th[data-type$="-ground"] {
+    background-image: linear-gradient(to bottom right, transparent, #E0C068);
+}
+td[data-type$="-psychic"], th[data-type$="-psychic"] {
+    background-image: linear-gradient(to bottom right, transparent, #F85888);
+}
+td[data-type$="-rock"], th[data-type$="-rock"] {
+    background-image: linear-gradient(to bottom right, transparent, #B8A038);
+}
+td[data-type$="-ice"], th[data-type$="-ice"] {
+    background-image: linear-gradient(to bottom right, transparent, #98D8D8);
+}
+td[data-type$="-bug"], th[data-type$="-bug"] {
+    background-image: linear-gradient(to bottom right, transparent, #A8B820);
+}
+td[data-type$="-dragon"], th[data-type$="-dragon"] {
+    background-image: linear-gradient(to bottom right, transparent, #7038F8);
+}
+td[data-type$="-ghost"], th[data-type$="-ghost"] {
+    background-image: linear-gradient(to bottom right, transparent, #705898);
+}
+td[data-type$="-dark"], th[data-type$="-dark"] {
+    background-image: linear-gradient(to bottom right, transparent, #705848);
+}
+td[data-type$="-steel"], th[data-type$="-steel"] {
+    background-image: linear-gradient(to bottom right, transparent, #B8B8D0);
+}
+td[data-type$="-fairy"], th[data-type$="-fairy"] {
+    background-image: linear-gradient(to bottom right, transparent, #EE99AC);
+}
+
+/*  LISTS  */
+
+dd::before {
+    color: #a3a3a3;
+}
+
+/*  BLOCK ELEMENTS  */
+
+blockquote::before, blockquote::after {
+    color: #636363;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #cccccc;
+}
+
+hr {
+    color: #828282;
+    background: none;
+}
+
+/*  PHRASING  */
+
+a[href], b, cite, em, mark, strong, time, u {
+    color: #cccccc;
+}
+
+a[href] {
+    background-color: transparent;
+}
+
+a[href]:hover {
+    background-color: #0c0c0c;
+}
+
+body > nav > a[href] {
+    border-color: #cccccc;
+    background-color: #0c0c0c;
+    color: #cccccc;
+}
+
+body > nav > a[href]:hover {
+    background-color: #cccccc;
+    color: #0c0c0c;
+}
+
+mark {
+    background: #0c0c0c;
+}

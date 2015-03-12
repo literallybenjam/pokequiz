@@ -1,0 +1,241 @@
+/*  @RULES  */
+
+/*  GLOBAL RULES  */
+
+/*  PAGE LAYOUT  */
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 18pt 15pt;
+}
+
+/*  SECTIONING  */
+
+aside {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+    margin: 18pt 0 0;
+    width: 100%;
+}
+
+section {
+    display: block;
+    margin: auto;
+    padding: 0;
+}
+
+/*  TABLES  */
+
+caption {
+    margin: 0;
+    padding: 4.5pt 3.75pt;
+}
+
+table {
+    margin: 18pt auto;
+    border-collapse: separate;
+    border-spacing: 1.875pt 2.25pt;
+    padding: 0;
+}
+
+tbody + tbody::before {
+    display: table-row;
+    height: 18pt;
+}
+
+td > table:only-child {
+    margin: auto;
+    width: 100%;
+}
+
+td, th {
+    border: none;
+    border-radius: 1.875pt;
+    padding: 2.25pt 1.875pt;
+    vertical-align: top;
+}
+
+/*  LISTS  */
+
+ul, ol, dl {
+    margin: 0;
+    padding: 0 0 0 30pt;
+}
+
+dt {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+dd {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+dd + dd::before {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 100%;
+}
+
+dd:after {
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+/*  BLOCK ELEMENTS  */
+
+blockquote {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 30pt;
+}
+
+blockquote::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 30pt;
+    height: 36pt;
+}
+
+blockquote::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+figure {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    display: block;
+    margin: 9pt 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 27pt 0 18pt;
+    padding: 0;
+    overflow: hidden;
+}
+
+h3 {
+    margin: 18pt 0;
+    border-bottom: 1px solid;
+    padding: 0 0 calc(9pt - 1px);
+}
+
+hr {
+    margin: 18pt auto;
+    margin: calc(18pt - .5px) auto;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0;
+    width: calc(100% - 30pt);
+    height: 0;
+}
+
+img {
+    display: inline-block;
+    margin: 9pt 7.5pt;
+    padding: 0;
+    width: 150pt;
+    height: auto;
+}
+
+blockquote img, dt img, dd img, figcaption img, li img, p img {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 1em;
+}
+
+figure > img {
+    display: block;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+body > header > img {
+    display: block;
+    margin: 0 auto 15pt;
+    border-radius: 67.5pt;
+    width: 135pt;
+    height: 135pt;
+}
+
+td > img:only-of-type, th > img:only-of-type {
+    display: block;
+    margin: auto;
+}
+
+p {
+    margin: 18pt 0;
+    padding: 0;
+}
+
+dd p {
+    margin: 0;
+}
+
+dd p:last-child {
+    margin-bottom: 18pt;
+}
+
+/*  PHRASING  */
+
+a[href] {
+    transition: background-color .5s;
+}
+
+body > nav > a[href] {
+    display: inline-block;
+    margin: 0 7.5pt;
+    border: solid 1pt;
+    border-radius: 1.5pt;
+    padding: 0.5pt;
+    height: 15pt;
+    width: 150pt;
+    transition: color .5s, background-color .5s;
+}
+
+sub {
+    vertical-align: baseline;
+}
+
+sup {
+    vertical-align: super;
+}

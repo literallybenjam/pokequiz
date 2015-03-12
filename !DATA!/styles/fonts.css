@@ -1,0 +1,93 @@
+/*  @RULES  */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic&subset=latin,latin-ext);
+
+/*  GLOBAL RULES  */
+
+*:root {
+}
+
+*:lang(*-fonipa) {
+    font-feature-settings: "liga", "clig", "dlig", "calt", "cv04", "cv05", "ss06";
+}
+
+/*  PAGE LAYOUT  */
+
+html {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-synthesis: none;
+}
+
+/*  SECTIONING  */
+
+aside {
+    font-style: italic;
+    font-weight: 100;
+}
+
+/*  TABLES  */
+
+caption, th {
+    font-weight: 400;
+}
+
+tfoot {
+    font-weight: 100;
+}
+
+/*  LISTS  */
+
+dt {
+    font-weight: 400;
+}
+
+/*  BLOCK ELEMENTS  */
+
+blockquote::before, blockquote::after {
+    font-size: 30pt;
+    font-weight: 400;
+}
+
+figcaption {
+    font-size: 12pt;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 30pt;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 22.5pt;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 18pt;
+    font-weight: 300;
+}
+
+/*  PHRASING  */
+
+b {
+    font-weight: inherit;
+}
+
+cite, em {
+    font-style: inherit;
+}
+
+dfn, strong {
+    font-weight: 400;
+}
+
+small {
+    font-size: inherit;
+    font-weight: 100;
+}
+
+sub, sup {
+    font-size: .4em;
+}
