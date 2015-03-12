@@ -102,7 +102,7 @@ function loadDiv() {
     for (i = 0; i < current_div.getElementsByTagName("SPAN").length; i++) {
         current_div.getElementsByTagName("SPAN").item(i).addEventListener("click", selectOption, false);
     }
-    current_div.scrollIntoView(true, {behavior: "smooth"});
+    current_div.scrollIntoView({block: "end", behavior: "smooth"});
 }
 
 function loadSection(section_id) {

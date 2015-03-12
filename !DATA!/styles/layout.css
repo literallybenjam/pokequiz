@@ -14,11 +14,6 @@ body {
     padding: 18pt 15pt;
 }
 
-body::after {
-    display: block;
-    height: 100vh;
-}
-
 /*  SECTIONING  */
 
 aside {

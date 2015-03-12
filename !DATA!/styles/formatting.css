@@ -10,10 +10,6 @@
 
 /*  PAGE LAYOUT  */
 
-body::after {
-    content: "";
-}
-
 /*  SECTIONING  */
 
 div {
