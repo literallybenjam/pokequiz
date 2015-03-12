@@ -7,7 +7,8 @@ var current_div = null;
 function advanceDiv() {
 
     unloadDiv();
-    current_div = current_div.nextElementSibling;
+    do current_div = current_div.nextElementSibling;
+    while (current_div && current_div.tagName !== "DIV");
     if (current_div) loadDiv();
     else {
 
@@ -50,7 +51,8 @@ function loadDiv() {
 
 function loadSection(id) {
     current_section = document.getElementById(id);
-    current_div = current_section.children.item(0);
+    current_section.dataset.show = "";
+    current_div = current_section.getElementsByTagName("div").item(0);
 }
 
 function init() {
