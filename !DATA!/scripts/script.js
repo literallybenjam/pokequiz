@@ -4,8 +4,12 @@ var stage;
 var current_section = null;
 var current_div = null;
 var egg_group;
-var EGG_NAMES = ["Field", "Undiscovered", "Water 1", "Monster", "Grass", "Bug", "Mineral", "Dragon", "Flying", "Water 3", "Amorphous", "Water2", "Ditto", "Fairy", "Human-Like"];
-var EGG_COORDS = [[1, 0], [1, 1], [0.6, 0], [0.6, 0.7], [0.45, 0.55], [0.45, 0.8], [0.45, 1], [0.3, 0], [0.3, 1], [0.2, 0.8], [0.2, 1], [0, 0.7], [0, 0]];
+//  Size, clusion  //
+var EGG_NAMES = ["Field", "Ditto", "Water 1", "Monster", "Grass", "Bug", "Mineral", "Dragon", "Flying", "Water 3", "Amorphous", "Water2", "Undiscovered", "Fairy", "Human-Like"];
+var EGG_COORDS = [[1, 0], [1, 1], [0.6, 0], [0.6, 0.7], [0.45, 0.55], [0.45, 0.8], [0.45, 1], [0.3, 0], [0.3, 1], [0.2, 0.8], [0.2, 1], [0, 0.7]];
+//  Activeness, act  //
+var MONSTER_NAMES = ["Cocky", "Tough", "Giant", "Overpowering", "Normal", "Elegant", "Protective", "Ninja", "Lizard"];
+var MONSTER_COORDS = [[0.5, 1], [0, 1], [0, 0.5], [1, 1], [0.5, 0.5], [0, 0], [1, 0], [0.5, 0], [1, 0.5]];
 
 function calculateSectionValue(section_id) {
     var section_element = document.getElementById(section_id);
@@ -29,8 +33,7 @@ function calculateDistance(x1, y1, x2, y2) {
     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 }
 
-function calculateEggGroup(with_ditto) {
-    if (with_ditto === undefined) with_ditto = true;
+function calculateEggGroup() {
     var size = calculateSectionValue("egg-size");
     var clusive = calculateSectionValue("egg-clusive");
     var best_guess = 0;
@@ -38,7 +41,6 @@ function calculateEggGroup(with_ditto) {
     var i;
     var c;
     var n = EGG_COORDS.length;
-    if (!with_ditto) n--;
     for (i = 0; i < n; i++) {
         c = calculateDistance(EGG_COORDS[i][0], EGG_COORDS[i][1], size, clusive);
         if (c < best_guess_distance) {
@@ -55,7 +57,6 @@ function displayResult(name) {
 
 function advanceDiv() {
 
-    var calc_with_ditto = true;
     unloadDiv();
     do current_div = current_div.nextElementSibling;
     while (current_div && current_div.tagName !== "DIV");
@@ -71,27 +72,31 @@ function advanceDiv() {
             case "egg-size":
                 loadSection("egg-clusive");
                 break;
+            case "egg-clusive":
+                calculateEggGroup();
+                if (EGG_NAMES[egg_group] == "Ditto") loadSection("ditto-check");
+                else if (EGG_NAMES[egg_group] == "Dragon") loadSection("dragon-check");
+                else if (EGG_NAMES[egg_group] == "Flying") loadSection("flying-check");
+                else loadEggGroup();
+                break;
 
             case "ditto-check":
                 if (calculateSectionValue("ditto-check") >= 0.5) {
                     displayResult("Ditto");
                     break;
                 }
-                else calc_with_ditto = false;
-                /* falls through */
-            case "egg-clusive":
-                calculateEggGroup(calc_with_ditto);
-                if (EGG_NAMES[egg_group] == "Ditto") loadSection("ditto-check");
-                else if (EGG_NAMES[egg_group] == "Dragon") loadSection("dragon-check");
-                else if (EGG_NAMES[egg_group] == "Flying") loadSection("flying-check");
+                egg_group = 12;
+                loadEggGroup();
                 break;
 
             case "dragon-check":
                 if (calculateSectionValue("dragon-check") < 0.5) egg_group = 13;
+                loadEggGroup();
                 break;
 
             case "flying-check":
                 if (calculateSectionValue("flying-check") < 0.5) egg_group = 14;
+                loadEggGroup();
                 break;
 
             default:
@@ -130,6 +135,59 @@ function loadSection(section_id) {
     current_section.dataset.show = "";
     current_div = current_section.getElementsByTagName("DIV").item(0);
     loadDiv();
+}
+
+function loadEggGroup() {
+
+    switch(EGG_NAMES[egg_group]) {
+
+        case "Monster":
+            break;
+
+        case "Water 1":
+            break;
+
+        case "Bug":
+            break;
+
+        case "Flying":
+            break;
+
+        case "Field":
+            break;
+
+        case "Fairy":
+            break;
+
+        case "Grass":
+            break;
+
+        case "Human-Like":
+            break;
+
+        case "Water 3":
+            break;
+
+        case "Mineral":
+            break;
+
+        case "Amorphous":
+            break;
+
+        case "Water 2":
+            break;
+
+        case "Dragon":
+            break;
+
+        case "Undiscovered":
+            break;
+
+        default:
+            break;
+
+    }
+
 }
 
 function init() {
